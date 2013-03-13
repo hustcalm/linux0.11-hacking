@@ -75,7 +75,9 @@ _keyboard_interrupt:
 	movl $0x10,%eax
 	mov %ax,%ds
 	mov %ax,%es
-	xorl %al,%al		
+    
+	
+    movb $0,%al
 	inb $0x60,%al
 	cmpb $0xe0,%al
 	je set_e0
@@ -321,7 +323,7 @@ alt_map:
 	.byte '|
 	.fill 10,1,0
 
-# 449 "keyboard.S"
+# 451 "keyboard.S"
 
 
 
