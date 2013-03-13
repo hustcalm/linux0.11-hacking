@@ -11,7 +11,8 @@ LD86	=ld86 -0
 AS	=as
 #LD	=gld
 LD	=ld
-LDFLAGS	=-s -x -M
+#LDFLAGS	=-s -x -M
+LDFLAGS	=-s -x -M -m elf_i386 -Ttext 0 -e startup_32
 CC	=gcc $(RAMDISK)
 #CFLAGS	=-Wall -O -fstrength-reduce -fomit-frame-pointer \
 -fcombine-regs -mstring-insns
