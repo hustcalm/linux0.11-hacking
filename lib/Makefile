@@ -6,7 +6,8 @@
 # unless it's something special (ie not a .c file).
 #
 
-AR	=gar
+#AR	=gar
+AR	=ar
 #AS	=gas
 AS	=as
 #LD	=gld
