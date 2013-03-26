@@ -1,7 +1,7 @@
-# 1 "keyboard.S"
+# 1 "keyboard_input.S"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "keyboard.S"
+# 1 "keyboard_input.S"
 
 
 
@@ -41,10 +41,10 @@
 
 # 47 "../../include/linux/config.h"
 
-# 14 "keyboard.S" 2
+# 14 "keyboard_input.S" 2
 
 .text
-.globl _keyboard_interrupt
+.globl keyboard_interrupt
 
 
 
@@ -65,7 +65,7 @@ e0:	.byte 0
 
 
 
-_keyboard_interrupt:
+keyboard_interrupt:
 	pushl %eax
 	pushl %ebx
 	pushl %ecx
@@ -323,7 +323,7 @@ alt_map:
 	.byte '|
 	.fill 10,1,0
 
-# 451 "keyboard.S"
+# 451 "keyboard_input.S"
 
 
 
