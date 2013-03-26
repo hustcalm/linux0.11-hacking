@@ -99,7 +99,7 @@ e0_e1:	inb $0x61,%al
 	movb $0x20,%al
 	outb %al,$0x20
 	pushl $0
-	call _do_tty_interrupt
+	call do_tty_interrupt
 	addl $4,%esp
 	pop %es
 	pop %ds
@@ -121,7 +121,7 @@ set_e1:	movb $2,e0
 put_queue:
 	pushl %ecx
 	pushl %edx
-	movl _table_list,%edx		# read-queue for console
+	movl table_list,%edx		# read-queue for console
 	movl head(%edx),%ecx
 1:	movb %al,buf(%edx,%ecx)
 	incl %ecx
@@ -244,7 +244,7 @@ func:
 	pushl %eax
 	pushl %ecx
 	pushl %edx
-	call _show_stat
+	call show_stat
 	popl %edx
 	popl %ecx
 	popl %eax
