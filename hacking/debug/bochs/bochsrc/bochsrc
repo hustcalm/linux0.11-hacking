@@ -1,0 +1,24 @@
+ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata1: enabled=1, ioaddr1=0x170, ioaddr2=0x370, irq=15
+ata2: enabled=0, ioaddr1=0x1e8, ioaddr2=0x3e0, irq=11
+ata3: enabled=0, ioaddr1=0x168, ioaddr2=0x360, irq=9
+ata0-master: type=disk, path=minix203.img, cylinders=940, heads=6, spt=17, translation=none
+ata0-master: type=disk, path="default-hd.img", mode=flat, cylinders=20, heads=16, spt=63
+floppya: image="default-fd-boot.img", status=inserted
+floppyb: image="default-fd-root.img", status=inserted
+boot: a
+floppy_bootsig_check: disabled=0
+log: bochsout.txt
+panic: action=ask
+error: action=report
+info: action=report
+debug: action=ignore
+debugger_log: -
+parport1: enabled=1, file="parport.out"
+vga_update_interval: 300000
+keyboard_serial_delay: 250
+keyboard_paste_delay: 100000
+mouse: enabled=1
+private_colormap: enabled=0
+ne2k: ioaddr=0x240, irq=9, mac=b0:c4:20:00:00:00, ethmod=linux, ethdev=eth0
+keyboard_mapping: enabled=0, map=
