@@ -37,6 +37,9 @@
 #define DEFAULT_MAJOR_ROOT 3
 #define DEFAULT_MINOR_ROOT 6
 
+#define MAJOR(a) (((unsigned)(a))>>8)
+#define MINOR(a) ((a)&0xff)
+
 /* max nr of sectors of setup: don't change unless you also change
  * bootsect etc */
 #define SETUP_SECTS 4
