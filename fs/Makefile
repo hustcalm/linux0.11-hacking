@@ -7,7 +7,7 @@ LD	=ld
 #CFLAGS	=-Wall -O -fstrength-reduce -fcombine-regs -fomit-frame-pointer \
 	-mstring-insns -nostdinc -I../include
 CFLAGS	=-Wall -O -fstrength-reduce -fomit-frame-pointer \
-	-nostdinc -I../include
+	-nostdinc -fno-stack-protector -I../include
 CPP	=gcc -E -nostdinc -I../include
 
 .c.s:
